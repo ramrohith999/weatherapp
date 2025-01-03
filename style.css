@@ -104,3 +104,24 @@ body{
     display: none;
 
 }
+
+.heart{
+    color: red;
+}
+
+.love{
+    margin-top: 25px;
+    text-align: center;
+    justify-content: center;
+}
+
+.sunny{
+    font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff007c, #ffcc00, #00ffcc, #007cff, #ff007c);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: sparkle 3s linear infinite;
+            font-size: medium;
+}

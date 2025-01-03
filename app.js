@@ -11,6 +11,7 @@ async function checkWeather(city) {
 
     if(response.status== 404){
         document.querySelector(".error").style.display="block";
+        document.getElementsByClassName(".advice").style.display="none";
     }else{
         var data= await response.json();
 
@@ -41,7 +42,30 @@ async function checkWeather(city) {
         weatherIcon.src= "images/snow.png";
     
     }
+
+//
+if(data.main.temp<=5){
+    document.querySelector(".advice").innerHTML="It is so chilly, wear a sweater &#x2744";
+    }else if(data.main.temp>5 && data.main.temp<=15 ){
+        document.querySelector(".advice").innerHTML="Nice time to get a coffee &#9749";
+
+    }
+    else if(data.main.temp>15 && data.main.temp<=25){
+        document.querySelector(".advice").innerHTML="Best time to go for a walk &#128522 ";
+    }else if(data.main.temp>25 && data.main.temp<=35){
+        document.querySelector(".advice").innerHTML="It is warm out there &#127774 ";
+
+    }else if(data.main.temp>35){
+        document.querySelector(".advice").innerHTML="Stay Indoors!! &#129297  ";
+    
+    }
+
+//new code
+
+
     document.querySelector(".error").style.display="none";
+    document.querySelector(".advice").style.display="block";
+
 
     }
 

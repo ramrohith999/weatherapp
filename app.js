@@ -45,7 +45,7 @@ async function checkWeather(city) {
 
 //
 if(data.main.temp<=5){
-    document.querySelector(".advice").innerHTML="It is so chilly, wear a sweater &#x2744";
+    document.querySelector(".advice").innerHTML="It is so chilly, wear a sweater &#10052";
     }else if(data.main.temp>5 && data.main.temp<=15 ){
         document.querySelector(".advice").innerHTML="Nice time to get a coffee &#9749";
 
